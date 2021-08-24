@@ -1,0 +1,95 @@
+@import '../../styles/global-variables/colors.scss';
+
+.card {
+  width: 15rem;
+  height: 16rem;
+  background: $primary;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 2.5rem;
+  box-shadow: 0 4px 10px 0 $sub-Title;
+  margin: 0.5rem;
+  text-decoration: none;
+
+  &:hover {
+    box-shadow: 0 4px 10px 0 $accent;
+    border: 1px solid $accent;
+  }
+
+  &_image{
+    height: 70%;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    color: $indigo-dye;
+    font-weight: bolder;
+    letter-spacing: -0.4px;
+  }
+  &__sub-title {
+    font-size: 1rem;
+    color: $title;
+  }
+}
+
+.groups {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 2rem 2rem 0;
+  justify-content: space-around;
+}
+
+.group-loading {
+  height: 100%;
+  margin: 0 7rem;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 25rem);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .card {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    &_image {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .card {
+    &__title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .card {
+    width: 12rem;
+    height: 14rem;
+    justify-content: space-between;
+    flex-direction: column;
+    &__title {
+      font-size: 1.2rem;
+    }
+
+    &_image {
+      height: 50%;
+    }
+  }
+}

@@ -1,0 +1,301 @@
+@import '../../../styles/global-variables/colors.scss';
+@import '../../../styles/global-variables/sizes.scss';
+
+$navbar-height: 130px;
+@function screen-size() {
+  @return 100vh - 14vh;
+}
+
+.navbar {
+  font-weight: 500;
+  background: $primary;
+  border-bottom: 7px solid $complementary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  letter-spacing: -0.2px;
+
+  &__logo {
+    margin-left: 20px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+  }
+
+  &__links {
+    color: $dark-slate-gray;
+    text-decoration: none;
+    padding: 0.5rem 0.7rem;
+
+    &:hover {
+      color: $complementary;
+      border-bottom: 5px solid $complementary;
+      transition: all 0.2s ease-out;
+    }
+  }
+
+  &__select_container {
+    padding: 0 1.6rem 0 0;
+  }
+
+  &__link-active {
+    color: $complementary;
+    border-bottom: 5px solid $complementary;
+    padding: 0.5rem 0.7rem;
+    text-decoration: none;
+  }
+
+  &__img {
+    width: 20rem;
+    height: 6.8rem;
+    object-fit: contain;
+    object-position: 50% 50%;
+    margin: 0.5rem 0;
+  }
+
+  &__img-aditional{
+    width: 5.5rem;
+  }
+}
+
+.button {
+  color: $details;
+  text-decoration: none;
+  padding: 0.3rem 0.7rem;
+  background-color: $accent;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 1rem 0 1.8rem;
+}
+
+.fa {
+  &-firstdraft {
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+  }
+
+  &-bars {
+    color: $complementary;
+  }
+}
+
+.menu__icon {
+  display: none;
+}
+@media screen and (max-width: 1192px) {
+  .navbar {
+    font-size: 1.05rem;
+   
+    &__ _container {
+      padding: 0 2rem 0 0;
+    }
+    &__logo {
+      margin-left: 0;
+      padding: 0 0 0 0.9rem;
+    }
+    &__links {
+      padding: 0.5rem 0.4rem;
+    }
+    &__link-active {
+      padding: 0.5rem 0.5rem;
+    }
+  }
+
+  .button {
+    margin: 0 1rem 0 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .navbar {
+    &__img {
+      height: 6rem;
+      width: 15rem;
+    }
+
+    &__img-aditional{
+      width: 5rem;
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .navbar {
+    &__img {
+      height: 6rem;
+      width: 14rem;
+    }
+    &__img-aditional{
+      width: 4.5rem;
+    }
+    &__select_container {
+      padding: 0 1.2rem 0 0;
+    }
+
+    &__logo {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: #{$max-width-size}) {
+  .button {
+    display: block;
+    text-align: center;
+    padding: 1.2rem;
+    margin: 0.5rem auto;
+    border-radius: 4px;
+    width: 80%;
+    background: $primary;
+    text-decoration: none;
+    color: $indigo-dye;
+    font-size: 1.2rem;
+  }
+
+  .button:hover {
+    background: $accent;
+    color: $indigo-dye;
+    transition: 250ms;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 80rem;
+      position: absolute;
+      top: 104px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+
+      &.active {
+        background: $complementary;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 3;
+      }
+    }
+    &__link-active {
+      color: $primary;
+      border-bottom: 5px solid $primary;
+    }
+
+    &__img {
+      height: 85%;
+      padding: 0 0;
+    }
+
+    &__links {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+
+      &:hover {
+        color: $complementary;
+        background: rgba(0, 65, 119, 0.7);
+        border-radius: 0;
+      }
+    }
+
+    &__link-active {
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+      display: table;
+      background: rgba(0, 65, 119, 0.7);
+    }
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: 0 1rem;
+      height: 100%;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+    }
+
+    &__select_container {
+      display: none;
+    }
+  }
+
+  .menu__icon {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0 20px 0 0;
+  }
+
+  .fa-times {
+    color: $complementary;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .navbar__menu {
+    height: 130rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .navbar__img {
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .navbar {
+    height: 80px;
+
+    &__menu {
+      top: 80px;
+    }
+  }
+  .navbar__img {
+    display: none;
+  }
+
+  .navbar__img-aditional{
+    display: none;
+  }
+
+  .menu__icon {
+    display: block;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+  }
+}

@@ -1,0 +1,37 @@
+@import '../../styles/global-variables/colors.scss';
+
+.select-groups {
+  min-width: 13rem !important;
+  margin: 0 1rem !important;
+}
+
+.select-degree {
+  min-width: 11rem !important;
+  margin: 0 1rem !important;
+}
+
+.researchers {
+  &__table {
+    width: 90%;
+    background-color: $cultured;
+  }
+}
+
+@media screen and (max-width:730px){
+  .researchers__filters {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .select-groups, .select-degree {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .researchers {
+    &__table {
+      width: 100%;
+    }
+  }
+}

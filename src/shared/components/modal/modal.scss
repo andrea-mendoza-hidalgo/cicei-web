@@ -1,0 +1,83 @@
+@import '../../../styles/global-variables/colors.scss';
+
+.modal {
+  &__header {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: row;
+
+    &_title {
+      font-family: century-gothic, sans-serif !important;
+      font-weight: bolder;
+      align-self: center;
+      justify-self: center;
+      color: $title;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+    &_title {
+      font-family: century-gothic, sans-serif;
+      color: $title;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    &_content {
+      color: $sub-Title;
+      text-align: justify;
+      font-size: 1.2rem;
+    }
+
+    &_content {
+      color: $sub-Title;
+      text-align: justify;
+      font-size: 1.2rem;
+    }
+
+    &_link{
+      @extend .modal__body_content;
+      text-decoration: none;
+      color: $details;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .modal {
+    &__header_title {
+      font-size: 1.1rem;
+    }
+
+    &__body {
+      &_title {
+        font-size: 1rem;
+      }
+      &_content {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .modal {
+    &__header_title {
+      font-size: 1rem;
+    }
+
+    &__body {
+      &_title {
+        font-size: 0.98rem;
+      }
+      &_content {
+        font-size: 0.98rem;
+      }
+    }
+  }
+}

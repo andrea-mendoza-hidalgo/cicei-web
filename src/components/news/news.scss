@@ -1,0 +1,119 @@
+@import '../../styles/global-variables/colors.scss';
+
+.news {
+  display: flex;
+  flex-direction: column;
+  background: $cultured;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+
+  &__mobile {
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  &__loading {
+    background-color: $cultured;
+  }
+
+  &__content {
+    padding: 0;
+  }
+
+  &__card {
+    width: 70%;
+    padding: 2rem 4rem;
+    margin: 1.2rem 0;
+  }
+
+  &__button {
+    background: $accent;
+    color: $details;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    border: $accent solid 0.09rem;
+    font-weight: bolder;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 72%;
+
+    &-text {
+      color: $indigo-dye;
+      padding: 0.5rem 0.8rem;
+      margin: 0 0.5rem;
+      background-color: $cyber-yellow;
+      font-weight: bold;
+      font-size: 0.8rem;
+      border: $cyber-yellow solid 0.09rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    &-disabled{
+      padding: 0.5rem 0.8rem;
+      margin: 0 0.5rem;
+      border-radius: 5px;
+      background-color: $platinum;
+      border: gray solid 0rem;
+      color: $title;
+    }
+  }
+
+  &__description {
+    font-family: century-gothic, sans-serif !important;
+    height: 10rem;
+    text-align: justify;
+
+    margin: 0 0 1em 0;
+    overflow: hidden;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .news {
+    &__card {
+      width: 80%;
+      padding: 1rem 2rem;
+      margin: 0.5rem 0;
+    }
+    &__footer {
+      width: 82%;
+      &-text {
+        margin: 1rem 0.5rem 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .news {
+    &__card {
+      width: 90%;
+      padding: 0.8rem 1.8rem;
+      margin: 0.5rem 0;
+    }
+
+    &__footer {
+      width: 93%;
+  
+      &-text {
+        padding: 0.7rem 1rem;
+        margin: 1rem 0.5rem 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

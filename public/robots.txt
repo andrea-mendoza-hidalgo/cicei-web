@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /projects/*
+Disallow: /news/*
+Disallow: /researchers/*
+Disallow: /groups/*
+Disallow: /static/js/*.js
+Disallow: /static/media/*.png
+Disallow: /static/media/*.jpg
+Disallow: /static/media/*.svg

@@ -1,0 +1,172 @@
+@import '../../styles/global-variables/colors.scss';
+
+.projects-details-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  background-color: $cultured;
+}
+
+.project-details {
+  background-color: $cultured;
+  &__container {
+    background: white;
+    height: 100%;
+    margin: 0 7rem;
+  }
+
+  &__loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 25rem);
+  }
+
+  &__images{
+    padding: 0 15% 2rem 15%;
+  }
+
+  &__all {
+    padding: 1rem 15% 0 15%;
+    
+    &-container{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__resume {
+    margin: 1rem 0;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+
+    &_container {
+      padding: 0.2rem 1rem;
+      margin: 0.6rem 0;
+    }
+
+    &_title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: $title;
+    }
+
+    &_description {
+      font-family: century-gothic, sans-serif;
+      text-align: justify;
+      font-size: 1rem;
+      color: $sub-Title;
+    }
+  }
+
+  &__tap {
+    background-color: $accent;
+  }
+
+  &__selected {
+    color: $details;
+  }
+}
+
+.project-line {
+  place-self: center;
+  width: 90%;
+  height: 0;
+  border: 2px solid $accent;
+
+  &__container {
+    background: $primary;
+  }
+
+  &__info{
+    display: grid;
+    grid-template-columns: auto;
+    padding: 2rem 3.5rem 0 3.5rem;
+    margin: 0.6rem 0;
+  }
+}
+
+.project-image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &-large{
+    width: 45rem;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 50%;
+    margin: 1rem 1rem;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .project-image{
+    &-large{
+      width: 38rem;
+    }
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .project-image{
+    &-large{
+      width: 30rem;
+    }
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .project-image {
+    &__container {
+      margin: 0;
+    }
+
+    &__all {
+      padding: 1rem 2rem 2rem 2.5rem;
+    }
+  }
+
+  .project-image{
+    &-large{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 601px) {
+
+  .projects-details-container {
+    height: 100%
+  }
+
+  .project-details {
+    &__container {
+      margin: 0;
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__all {
+      padding: 1rem 1.5rem 1.5rem 1.2rem;
+    }
+
+    &__images{
+      padding: 0 5% 2rem;
+    }
+  }
+
+  .box {
+    padding: 0;
+  }
+}

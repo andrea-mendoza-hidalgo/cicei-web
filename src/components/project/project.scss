@@ -1,0 +1,28 @@
+@import '../../styles/global-variables/colors.scss';
+@import '../../styles/global-styles.scss';
+
+.project {
+  &__table {
+    width: 90%;
+    background-color: $cultured;
+    padding: 0 0 1rem;
+  }
+}
+
+.search {
+  padding: 0 1rem !important;
+}
+
+@media screen and (max-width: 500px) {
+  .project {
+    &__table {
+      width: 100%;
+    }
+
+    &__filters {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

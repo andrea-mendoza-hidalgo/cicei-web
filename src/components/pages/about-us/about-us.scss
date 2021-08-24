@@ -1,0 +1,257 @@
+@import '../../../styles/global-variables/colors.scss';
+@import '../../../styles/global-variables/sizes.scss';
+
+.au {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+
+  &__banner {
+    width: 80%;
+    height: 6rem;
+    background: $indigo-dye;
+    padding: 0 1rem;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    text-align: center;
+    color: $primary;
+    letter-spacing: 0.4rem;
+  }
+
+  &__container-shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px;
+  }
+
+  &__text {
+    font-family: century-gothic, sans-serif;
+    width: 60%;
+    text-align: justify;
+    margin-right: 60px;
+    color: $title;
+  }
+
+  &__shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap row;
+    padding: 24px 0;
+
+    width: 12rem;
+    height: 12rem;
+    border: 4px solid $accent;
+    border-radius: 200px;
+    margin: 0 60px;
+
+    &-title {
+      background: $primary;
+      color: $title;
+      font-size: 1.5rem;
+      font-weight: bolder;
+      padding-bottom: 1rem;
+      text-align: center;
+      padding-top: 10px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+  }
+
+  &__container-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-flow: wrap row;
+    padding: 3rem 0 0 0;
+  }
+
+  &__container-leaders {
+    padding: 0 0 1.5rem 0;
+  }
+}
+
+.info-box {
+  &__container {
+    display: grid;
+    grid-template-columns: 30rem;
+    padding: 2rem 0;
+  }
+
+  &__title {
+    background-color: $complementary;
+    padding: 1.8rem 0.3rem;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+
+  &__body {
+    font-size: 1.1rem;
+    text-align: center;
+    font-family: century-gothic, sans-serif;
+    color: $title;
+    font-weight: normal;
+    text-align: justify;
+    padding: 3rem;
+  }
+}
+
+.leaders {
+  &__container {
+    background: $primary;
+  }
+  &__info {
+    display: grid;
+    grid-template-columns: 14rem auto;
+    padding: 1rem 3.5rem 0 3.5rem;
+  }
+  &__title {
+    font-weight: bolder;
+    color: $details;
+    justify-self: center;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  &__line {
+    place-self: center;
+    width: 95%;
+    height: 0;
+    border: 2px solid $accent;
+  }
+  &__img {
+    overflow-x: hidden;
+    padding: 1rem 2rem;
+  }
+}
+
+.photo {
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap row;
+
+  &__container {
+    display: grid;
+    padding: 1rem 2rem;
+    grid-template-columns: 12rem;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition-delay: 0.32s;
+    transition-delay: 0.32s;
+    will-change: transform;
+
+    &:hover {
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+
+  &__img {
+    height: 140px;
+    width: 140px;
+    border: 6px solid $platinum;
+    border-radius: 300px;
+    justify-self: center;
+
+    &-missing {
+      opacity: 0.5;
+    }
+  }
+  &__name {
+    text-align: center;
+    justify-self: center;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: $title;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .au {
+    &__shape {
+      margin: 0 1.2rem 0 0;
+    }
+    &__text {
+      margin: 0;
+      padding-top: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .au {
+    padding: 1rem 0;
+    &__banner {
+      width: 100%;
+    }
+    &__container-shape {
+      flex-flow: wrap column;
+      padding: 0;
+    }
+
+    &__shape {
+      margin: 0;
+    }
+    &__text {
+      margin: 0;
+      padding-top: 3rem;
+    }
+  }
+
+  .info-box {
+    &__container {
+      display: grid;
+      grid-template-columns: 18rem;
+      padding: 2rem 0;
+    }
+
+    &__body {
+      font-size: 1.1rem;
+      text-align: center;
+      color: $title;
+      font-weight: lighter;
+      text-align: justify;
+      padding: 2rem;
+    }
+  }
+}
+@media screen and (max-width: 570px) {
+  .photo {
+    &__container {
+      grid-template-columns: 18rem;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .leaders {
+    &__info {
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+
+    &__line {
+      display: none;
+      width: 0;
+    }
+
+    &__img {
+      overflow-x: hidden;
+      padding: 1rem 2rem;
+    }
+  }
+}

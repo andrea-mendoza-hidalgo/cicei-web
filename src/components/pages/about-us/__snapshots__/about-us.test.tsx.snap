@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`About us Render Test About us renders correctly  1`] = `ReactWrapper {}`;
+
+exports[`Photo  Test Photo renders correctly  1`] = `ReactWrapper {}`;

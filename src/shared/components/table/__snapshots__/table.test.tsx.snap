@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Tests Table make descending sorting correctly 1`] = `ReactWrapper {}`;
+
+exports[`Table Tests Table renders correctly  1`] = `ReactWrapper {}`;
+
+exports[`Table Tests when screen size it is between 420 and 629 table has to show three columns 1`] = `ReactWrapper {}`;
+
+exports[`Table Tests when screen size it is between 630 and 750 table has to show three columns 1`] = `ReactWrapper {}`;
+
+exports[`Table Tests when screen size it is lower than 420, table has to show three columns 1`] = `ReactWrapper {}`;
+
+exports[`Table Tests when table is empty, mush show a empty table 1`] = `ReactWrapper {}`;
+
+exports[`Table with links Tests Table make descending sorting correctly 1`] = `ReactWrapper {}`;
+
+exports[`Table with links Tests Table with link renders correctly  1`] = `ReactWrapper {}`;
+
+exports[`Table with links Tests when screen size it is between 420 and 629 table has to show three columns 1`] = `ReactWrapper {}`;
+
+exports[`Table with links Tests when screen size it is between 630 and 750 table has to show three columns 1`] = `ReactWrapper {}`;
+
+exports[`Table with links Tests when screen size it is lower than 420, table has to show three columns 1`] = `ReactWrapper {}`;

@@ -1,0 +1,41 @@
+@import '../../../styles/global-variables/colors.scss';
+
+.dropdown {
+  &__menu {
+    background: $primary;
+    width: 200px;
+    position: absolute;
+    top: 80px;
+    list-style: none;
+    text-align: start;
+    z-index: 2;
+    box-shadow: 0 2px 4px $indigo-dye-complementary;
+
+    li {
+      background: $primary;
+      cursor: pointer;
+    }
+
+    li:hover {
+      background: $aero-complementary;
+    }
+
+    &__menu.clicked {
+      display: none;
+    }
+  }
+  &__link {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: $indigo-dye;
+    padding: 14px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .fa-caret-down {
+    display: none;
+  }
+}

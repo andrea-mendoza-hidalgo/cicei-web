@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card List Render Test CardList renders correctly  1`] = `ReactWrapper {}`;
+
+exports[`Card List Render Test Empty CardList renders correctly  1`] = `ReactWrapper {}`;

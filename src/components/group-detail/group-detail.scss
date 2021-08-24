@@ -1,0 +1,81 @@
+@import '../../styles/global-variables/colors.scss';
+
+.info {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  height: 12rem;
+  width: 90%;
+  margin: 2rem 0;
+  &__image {
+    height: 100%;
+    margin: 2rem 3rem 2rem 6rem;
+  }
+
+  &__lines {
+    font-size: 1.5rem;
+    margin: 0.6rem;
+    font-weight: 500;
+    color: $indigo-dye;
+  }
+
+  &__works {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    color: $indigo-dye;
+    font-family: century-gothic, sans-serif;
+    cursor: pointer;
+    margin: 0.3rem 0;
+    
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+
+.loading {
+  height: 100%;
+  width: 100%;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .info {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    margin: 0 0;
+
+    &__image {
+      height: 12rem;
+      margin: 0;
+    }
+    &__lines {
+      margin-top: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .info {
+    margin:0;
+    &__image {
+      height: 9rem;
+      margin: 0;
+    }
+  }
+}

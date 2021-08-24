@@ -1,0 +1,68 @@
+@import './global-variables/colors.scss';
+
+.page {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    background-color: $cultured;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 0;
+    background-color: $cultured;
+  }
+  &__banner {
+    width: 90%;
+    height: 6rem;
+    background: $indigo-dye;
+    padding: 0 1rem;
+  }
+  &__title {
+    font-size: 1.6rem;
+    font-weight: bolder;
+    text-align: center;
+    color: $primary;
+    letter-spacing: 0.4rem;
+  }
+}
+
+.filters {
+  width: 90%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__font {
+    font-family: century-gothic, sans-serif !important;
+  }
+}
+
+@media screen and (max-height: 1020px) {
+  .page {
+    &__banner {
+      width: 90%;
+      height: 6rem;
+    }
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .page__container {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page {
+    &__banner {
+      width: 100%;
+    }
+  }
+}

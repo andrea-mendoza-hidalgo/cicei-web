@@ -1,0 +1,30 @@
+@import '../../styles/global-variables/colors.scss';
+@import '../../styles/global-styles.scss';
+
+.date-picker {
+  margin: 0 1rem !important;
+}
+
+.search {
+  padding: 0 1rem !important;
+}
+.publication {
+  &__table {
+    width: 90%;
+    background-color: $cultured;
+    padding: 0 0 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .publication {
+    &__table {
+      width: 100%;
+    }
+    &__filters {
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
